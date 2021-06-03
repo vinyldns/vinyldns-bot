@@ -1,0 +1,69 @@
+{
+    "name": "vinyldns-bot",
+    "version": "1.0.0",
+    "private": true,
+    "author": "Ryan Emerle <Ryan_Emerle@comcast.com>",
+    "description": "VinylDNS Support Bot",
+    "dependencies": {
+        "coffee-script": "1.6.3",
+        "hubot": "3.3.2",
+        "hubot-scripts": "2.17.2",
+        "hubot-slack": "4.7.1",
+        "lodash.clonedeep": "^4.5.0",
+        "node-dig-dns": "0.2.10",
+        "node-schedule-tz": "^1.2.1-4",
+        "vinyldns-js": "^0.9.9",
+        "winston": "^3.2.1"
+    },
+    "engines": {
+        "node": ">=10.0.0",
+        "npm": ">=6.0.0"
+    },
+    "maintainers": [
+        {
+            "name": "Ryan Emerle",
+            "email": "ryan_emerle@comcast.com"
+        },
+        {
+            "name": "Michael Winslow",
+            "email": "michael_winslow@comcast.com"
+        }
+    ],
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "eslint": "^6.8.0",
+        "hubot-test-helper": "^1.9.0",
+        "mocha": "^8.3.2",
+        "nyc": "^15.0.0",
+        "sinon": "^9.0.0"
+    },
+    "scripts": {
+        "pretest": "eslint --ignore-path .eslintignore .",
+        "test": "nyc mocha"
+    },
+    "nyc": {
+        "all": true,
+        "check-coverage": true,
+        "exclude": [
+            "scripts/commands/ee-*-command.js",
+            "scripts/config/**",
+            "scripts/resources/**",
+            "scripts/lib/Logger.js",
+            "**/test/**",
+            "**/.*"
+        ],
+        "lines": 90,
+        "statements": 90,
+        "watermarks": {
+            "lines": [
+                80,
+                90
+            ],
+            "statements": [
+                80,
+                90
+            ]
+        }
+    }
+}

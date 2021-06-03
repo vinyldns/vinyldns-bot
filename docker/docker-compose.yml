@@ -1,0 +1,21 @@
+version: '3'
+services:
+  vinyldns-bot:
+    container_name: vinyldns-bot-${BOT_CONTAINER_TAG:-latest}
+    image: [docker-image-location]
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - BOT_NAME=Dennis Botman
+      - DISABLE_USER_SYNC=true
+      - HUBOT_SLACK_RTM_CLIENT_OPTS={"useRtmConnect":true}
+      - HUBOT_HTTPD=false
+      - HUBOT_SLACK_TOKEN
+      - VINYLDNS_API_URI
+      - VINYLDNS_API_KEY
+      - VINYLDNS_API_SECRET
+    volumes:
+        - ${BOT_LOG_PATH:-/var/log/vinyldns-bot}:/home/node/app/logs

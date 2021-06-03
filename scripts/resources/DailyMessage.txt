@@ -1,0 +1,12 @@
+*Hi, I'm the VinylDNS support bot*
+
+I can answer a lot of questions (especially after hours)
+> To get started, type: `@[bot-name] help` in the channel, or you can DM `help` to `@[bot-name]` if you'd like to experiment privately.
+> You can also just ask a question: `@[bot-name] how do I do xyz?`
+
+Otherwise, support is available from *9:00AM to 5:00PM (ET) during regular business days*, with all requests being addressed within 24 hours on regular business days.
+
+See the channel topic for documentation and contact information.
+
+Thanks!
+[bot-name]

@@ -1,0 +1,11 @@
+README.md
+.*
+*.iml
+node_modules
+docker
+resources
+logs
+ci
+!.gitignore
+!.eslintrc.js
+!.eslintignore
