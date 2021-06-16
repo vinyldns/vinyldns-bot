@@ -86,7 +86,7 @@ describe('Help Command', () => {
                    .then(() => {
                        return this.room.user.say("bot_user", "3")
                                   .then(() => {
-                                      expect(this.room.messages).to.have.lengthOf(4);
+                                      expect(this.room.messages).to.have.lengthOf(5);
                                       expect(this.room.messages[3][1]).to.eql("@bot_user " + responses.faq.access);
                                   });
                    });
@@ -99,33 +99,8 @@ describe('Help Command', () => {
                                   .then(() => {
                                       return this.room.user.say("bot_user", "1")
                                                  .then(() => {
-                                                     expect(this.room.messages).to.have.lengthOf(6);
-                                                     expect(this.room.messages[5][1]).to.eql("@bot_user " + responses.faq.items.access_faqs[0].responseLines.join("\n\n"));
-                                                 });
-                                  });
-                   });
-    });
-
-    it("should return DNS delegation help if option 4 is chosen", () => {
-        return this.room.user.say("bot_user", "@hubot help")
-                   .then(() => {
-                       return this.room.user.say("bot_user", "4")
-                                  .then(() => {
-                                      expect(this.room.messages).to.have.lengthOf(4);
-                                      expect(this.room.messages[3][1]).to.eql("@bot_user " + responses.faq.delegation);
-                                  });
-                   });
-    });
-
-    it("should return first faq when option 4, item 1 selected", () => {
-        return this.room.user.say("bot_user", "@hubot help")
-                   .then(() => {
-                       return this.room.user.say("bot_user", "4")
-                                  .then(() => {
-                                      return this.room.user.say("bot_user", "1")
-                                                 .then(() => {
-                                                     expect(this.room.messages).to.have.lengthOf(6);
-                                                     expect(this.room.messages[5][1]).to.eql("@bot_user " + responses.faq.items.delegation_faqs[0].responseLines.join("\n\n"));
+                                                     expect(this.room.messages).to.have.lengthOf(7);
+                                                     expect(this.room.messages[6][1]).to.eql("@bot_user " + responses.faq.items.access_faqs[0].responseLines.join("\n\n"));
                                                  });
                                   });
                    });

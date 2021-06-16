@@ -7,7 +7,6 @@ const {expect} = require('chai');
 
 const dns_change_faqs = require('../scripts/resources/dns-change-faqs');
 const access_faqs = require('../scripts/resources/access-faqs');
-const delegation_faqs = require('../scripts/resources/delegation-faqs');
 const zone_faqs = require('../scripts/resources/zone-connection-faqs');
 const AuthorizationService = require("../scripts/lib/service/authorization-service");
 
@@ -49,12 +48,10 @@ const responses = {
     faq: {
         items: {
             zone_faqs: zone_faqs.faqItems,
-            delegation_faqs: delegation_faqs.faqItems,
             access_faqs: access_faqs.faqItems,
             dns_change_faqs: dns_change_faqs.faqItems
         },
         zones: "Here are questions corresponding to zones:\n" + faqFormat(zone_faqs.faqItems),
-        delegation: "Here are questions corresponding to DNS delegation:\n" + faqFormat(delegation_faqs.faqItems),
         access: "Here are questions corresponding to access and credentials:\n" + faqFormat(access_faqs.faqItems),
         changes: "Here are questions corresponding to changes:\n" + faqFormat(dns_change_faqs.faqItems)
     },
