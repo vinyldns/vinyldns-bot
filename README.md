@@ -105,7 +105,7 @@ many people. Thank you! If you have contributed in any way, but do not
 see your name here, please open a PR to add yourself (in alphabetical
 order by last name)!
 
-## Maintainers
+## Maintainers 
 
 - Ryan Emerle
 - Michael Winslow
