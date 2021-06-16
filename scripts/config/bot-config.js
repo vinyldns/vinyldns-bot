@@ -7,6 +7,7 @@ const bot_config = {
     build_version: util.getValueOrDefault(process.env.BOT_VERSION, "1.0"),
     bot_name: process.env.BOT_NAME, // This will get overridden at runtime with the actual bot's name if not specified
     documentation_url: "https://www.vinyldns.io/portal/",
+    max_response_count: process.env.MAX_RESPONSE_COUNT ? process.env.MAX_RESPONSE_COUNT : 100,
     end_conversation_message: null,
     dialog_timeout_ms: process.env.BOT_DIALOG_TIMEOUT ? process.env.BOT_DIALOG_TIMEOUT : 300000,
     fallback_command: "faq-search",
