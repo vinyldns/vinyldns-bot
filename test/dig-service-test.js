@@ -13,7 +13,7 @@ describe('Dig Service', () => {
         sinon.stub(DigService.prototype, "_digCommand").get(() => (a, b) => new Promise(resolve => resolve([a, b])));
         await expect(new DigService().performLookup("domain.name", "TYPE")).to.eventually.eql([
             [
-                "@dns101.foo.net",
+                "@my.resolver.net",
                 "domain.name",
                 "TYPE"
             ],
