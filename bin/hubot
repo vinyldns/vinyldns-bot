@@ -5,4 +5,4 @@ set -e
 npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
-DISABLE_USER_SYNC=true HUBOT_SLACK_RTM_CLIENT_OPTS={"useRtmConnect":true} exec node_modules/.bin/hubot --name "bot" "$@"
+DISABLE_USER_SYNC=true HUBOT_SLACK_RTM_CLIENT_OPTS={\"useRtmConnect\":true} exec node_modules/.bin/hubot --name "bot" "$@"

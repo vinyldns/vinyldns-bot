@@ -11,7 +11,7 @@ services:
       - NODE_ENV=production
       - BOT_NAME=Dennis Botman
       - DISABLE_USER_SYNC=true
-      - HUBOT_SLACK_RTM_CLIENT_OPTS={"useRtmConnect":true}
+      - HUBOT_SLACK_RTM_CLIENT_OPTS={\"useRtmConnect\":true}
       - HUBOT_HTTPD=false
       - HUBOT_SLACK_TOKEN
       - VINYLDNS_API_URI
