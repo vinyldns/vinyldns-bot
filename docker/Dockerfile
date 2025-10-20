@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM FROM node:22.19.0-trixie-slim
 
 COPY package*.json /home/node/app/
 
