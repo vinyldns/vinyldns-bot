@@ -4,7 +4,7 @@ const {describe, it, beforeEach, afterEach} = require('mocha');
 const {expect} = require('chai');
 
 
-require("coffee-script");
+require("coffeescript/register");
 const CommandRepository = require("../scripts/lib/command-repository");
 const UnsolicitedCommand = require("../scripts/lib/unsolicited-command");
 const {beforeTest, afterTest, sinon} = require("./shared");

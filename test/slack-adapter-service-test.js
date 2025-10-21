@@ -1,6 +1,6 @@
 'use strict';
 
-require("coffee-script");
+require("coffeescript/register");
 const {ReactionMessage} = require('hubot-slack/src/message');
 const {describe, it} = require('mocha');
 const {expect} = require('chai');
